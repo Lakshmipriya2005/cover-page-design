@@ -1,134 +1,151 @@
-# Design of a Standard Calculator
+# cover-page-design
 
 ## AIM:
 
-To design a web application for a standard calculator.
+To develop a website to display the cover page design of a book
 
-## DESIGN STEPS:
+## Design Steps:
 
 ### Step 1:
-Create a new Django project using  "django-admin startproject",get into the project terminal  and use "python3 manage.py startapp" command.
+
+Create a new Django project and app.
 
 ### Step 2:
-Define  urls.py and views.py for the website .Allow host access and add the app name under installed 
+
+Create a static file directory and mention the changes in settings.
 
 ### Step 3:
-Create a templates folder under the app folder followed by a folder under templates with the app name followed by html file named calculator.html
+
+Make a new folder templates inside your app and create a html and map them using views and url.
 
 ### Step 4:
-Write HTML and CSS code in the file save it and run the app using python manage.py makemigrations and python manage.py migrate commands .Run the Server using "python3 manage.py runserver 0:80" command.
+
+Write down the code for book cover using HTML and CSS.
 
 ### Step 5:
- Validate the HTML and CSS code.
-### Step 6:
-Publish the website in the given URL.
 
-## PROGRAM :
+Add images and other contents using CSS record a screenshot of it.
+
+# Code:
+
+## HTML:
+
 ```
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>calculator</title>
-    <style type="text/css">
-      body {
-        background-color: #444654;
-      }
-      table {
-        border: 1px solid grey;
-        background-color: grey;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 15px;
-        height: 500px;
-        width: 50px;
-      }
-      input[type="text"] {
-        border: 1px solid black;
-        padding: 20px 30px;
-        font-size: 24px;
-        font-weight: bold;
-        border-radius: 2px;
-        width: 330px;
-      }
-
-      input[type="button"] {
-        color: blue;
-
-        font-weight: bold;
-        width: 100%;
-        padding: 20px 40px;
-        background-color: black;
-
-        border-radius: 50px;
-      }
-      input[type="button"]:hover {
-        transform: translateY(-5px);
-        transition: transform 0.3s ease-in-out;
-        color: #2fe3bd;
-        background-color: #444654;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"/>
+    <title>WEBPAGE</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
   </head>
   <body>
-    <form name="form1" onload="result.value=''">
-      <h1 style="text-align: center; color: blue">Simple Calculator</h1>
-      <table id="calc">
-        <tr>
-          <td colspan="3">
-            <input type="text" id="result" />
-          </td>
-        </tr>
-        <tr>
-          <td><input type="button" value="1" onclick="result.value+='1'" /></td>
-          <td><input type="button" value="2" onclick="result.value+='2'" /></td>
-          <td><input type="button" value="3" onclick="result.value+='3'" /></td>
-        </tr>
-        <tr>
-          <td><input type="button" value="4" onclick="result.value+='4'" /></td>
-          <td><input type="button" value="5" onclick="result.value+='5'" /></td>
-          <td><input type="button" value="6" onclick="result.value+='6'" /></td>
-        </tr>
-        <tr>
-          <td><input type="button" value="7" onclick="result.value+='7'" /></td>
-          <td><input type="button" value="8" onclick="result.value+='8'" /></td>
-          <td><input type="button" value="9" onclick="result.value+='9'" /></td>
-        </tr>
-        <tr>
-          <td><input type="button" value="+" onclick="result.value+='+'" /></td>
-          <td><input type="button" value="-" onclick="result.value+='-'" /></td>
-          <td><input type="button" value="*" onclick="result.value+='*'" /></td>
-        </tr>
-        <tr>
-          <td><input type="button" value="/" onclick="result.value+='/'" /></td>
-          <td><input type="button" value="0" onclick="result.value+='0'" /></td>
-          <td><input type="button" value="." onclick="result.value+='.'" /></td>
-        </tr>
-
-        <tr>
-          <td colspan="2">
-            <input
-              type="button"
-              value="="
-              onclick="result.value=eval(result.value)"
-            />
-          </td>
-          <td colspan="1">
-            <input
-              type="button"
-              value="clearall"
-              id="clear"
-              onclick="result.value=''"
-            />
-          </td>
-        </tr>
-      </table>
-    </form>
+    <div class="bg-container">
+      <div class="heading1">
+        <h1 class="code">Coding</h1>
+        <hr align="left" />
+      </div>
+      <div class="main">
+        <div class="content">
+          <h1 id="head">Responsive Web Design With HTML5 And CSS</h1>
+          <p id="con">
+            Develop Future-proof responsive websites using the latest HTML5 and
+            CSS
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="container d-flex flex-row">
+          <div class="mar">
+            <h1 id="bot-head">Third Edition</h1>
+          </div>
+          <div class="img-mar">
+            <img src="ben.jpeg" class="img" />
+          </div>
+        </div>
+        <hr class="bot" />
+      </div>
+    </div>
   </body>
 </html>
 
 ```
 
-## OUTPUT:
-![image](img.png)
-## Result:
-Thus we designed a web application for a standard calculator.
+## CSS:
+
+```
+
+.bg-container{
+    background-image: url(' https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/codingbg.png ');
+    background-size: cover;
+    height: 150vh;
+
+
+}
+.code{
+    color: blue;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-family:  'Times New Roman';
+    font-weight: bold;
+
+}
+hr{
+
+    background-color: orange;
+
+    width: 200px;
+
+
+}
+.main{
+    padding: 40px;
+    text-align: center;
+    color: white;
+    font-family: 'roboto';
+}
+#head{
+    font-size: 70px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+#con{
+    font-size: 25px;
+    font-weight: bold;
+}
+.bot{
+    background-color: orange;
+    width: 100%;
+
+}
+#bot-head{
+    color: chocolate;
+    font-weight: bold;
+}
+.img{
+    width: 50%;
+
+}
+.mar{
+    text-align: left;
+}
+.img-mar{
+   text-align: right;
+
+}
+
+```
+
+# Output:
+
+![output](webpage.png)
+
+# Result:
+
+Thus the program to develop a website to display the cover page design of a book is done.
+
